@@ -1,17 +1,34 @@
 <script>
+import './geConsulationCard.vue'
+import GeConsulationCard from './geConsulationCard.vue';
 export default {
-    name: 'appMain',
-    
+    name: "appMain",
+    components: "geConsultationCard",
+    components: { GeConsulationCard }
 }
 </script>
 
 <template>
   
     <main>
-        main
+        <section class="get-consultation container">
+        
+            <GeConsulationCard/>
+            <GeConsulationCard/>
+            <GeConsulationCard/>
+            
+        </section>
     </main>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../style/general.scss' as *;
+.get-consultation{
+    margin-top:150px;
+    & >:nth-of-type(even){
+        flex-direction: row-reverse;
+    }
+}
+
 
 </style>
