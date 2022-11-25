@@ -23,10 +23,10 @@ export default {
             </ul>
         </nav>
         
-        <div class=" quote col-3 d-flex justify-content-between align-items-center h-100 ">
-            <div><i class="fa-solid fa-phone"></i> <span>(555) 802-1234</span></div>
+        <div class=" quote col-4 d-flex justify-content-between align-items-center h-100 ">
+            <div class="px-5"><i class="fa-solid fa-phone"></i> <span>(555) 802-1234</span></div>
             <div>
-                <button type="button" class="btn btn-primary">Free Quote</button>
+                <button type="button" class="sc-button btn">Free Quote</button>
             </div>
         </div>
 </header>
@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
 @use '../style/general.scss' as *;
 @use '../style/partials/variables' as *;
+@use '../style/partials/sc-button.scss' as *;
 
 header{
     height: 115px;  
@@ -52,7 +53,7 @@ header{
         align-items: center;
         height: 100%;
         list-style-type: none;
-        padding-right: 50px;
+        padding-right: 0px;
         li{
             padding: 0 7px;
         }
@@ -89,17 +90,6 @@ header{
     .quote{
         i{
             color: $ecstasy;
-        }
-        button{
-            background-color: lighten($ecstasy , 37%);
-            border: 0px;
-            padding: 15px 38px;
-            color: $ecstasy;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            &:hover{
-                background-color: $ecstasy;
-            }
         }
     }
 
