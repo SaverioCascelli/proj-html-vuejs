@@ -1,6 +1,10 @@
 <script>
+import ctaCard from './ctaCard.vue';
 export default {
     name:'AppJumbotron',
+    components:{
+        ctaCard,
+    }
 }
 </script>
 
@@ -13,8 +17,9 @@ export default {
                     <h3>Online marketing to secure customer retention, lead, and sales. We focus on the bigger picture.</h3>
                     <button class="sc-button bg-white text-black">Our Servicess<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-            <div class="col-6">
-
+            <div class="col-6 right-jumbo">
+                <ctaCard
+                class="jumbo-card"/>
             </div>
             </div>
         </div>
@@ -43,6 +48,15 @@ export default {
         }
         i{
             margin-left:6px;
+        }
+    }
+
+    .right-jumbo{
+        position: relative;
+        .jumbo-card{
+            position: absolute;
+            top: 20%;
+            left: 17%;
         }
     }
 }
