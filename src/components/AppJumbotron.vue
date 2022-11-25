@@ -15,7 +15,7 @@ export default {
                 <div class="left-jumbo col-6 text-white">
                     <h1>Unlock Your Online Growth Potential</h1>
                     <h3>Online marketing to secure customer retention, lead, and sales. We focus on the bigger picture.</h3>
-                    <button class="sc-button bg-white text-black">Our Servicess<i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="sc-button">Our Servicess<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="col-6 right-jumbo">
                     <ctaCard
@@ -57,6 +57,15 @@ export default {
         }
         i{
             margin-left:6px;
+        }
+        .sc-button{
+            background:white;
+            color: black;
+            border: 1px solid white;
+            &:hover{
+                background: rgba($color: #000000, $alpha: 0);
+                color: white;
+            }
         }
     }
 
