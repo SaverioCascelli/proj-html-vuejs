@@ -1,10 +1,13 @@
 <script>
 import './geConsulationCard.vue'
 import GeConsulationCard from './geConsulationCard.vue';
+import Affiliate from './Affiliate.vue';
 export default {
     name: "appMain",
-    components: "geConsultationCard",
-    components: { GeConsulationCard }
+    components: {
+        GeConsulationCard,
+        Affiliate,
+     }
 }
 </script>
 
@@ -17,6 +20,9 @@ export default {
             <GeConsulationCard/>
             <GeConsulationCard/>
             
+        </section>
+        <section class="container affiliate-comp">
+            <Affiliate/>
         </section>
     </main>
 </template>
