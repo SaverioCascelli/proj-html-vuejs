@@ -1,6 +1,17 @@
 <script>
 export default {
     name:'getConsulationCard',
+    props:{
+        cardData:Object, 
+    },
+    methods:{
+        bg(color){
+            return `bg-${color}`
+        },
+        getImgUrl(imgName){
+            return new URL(`../assets/${imgName}`, import.meta.url).href
+        }
+    }
 }
 </script>
 
@@ -9,17 +20,17 @@ export default {
     <div class="row ">
         <div class="col-6">
             <div class="img-wrapper">
-                <img src="../assets/adventure_thumbnail-400x300.jpg" alt="">
+                <img :src="getImgUrl(cardData.imgName)" alt="">
             </div>
         </div>
             <div class="text col-6">
                 <div class="top-feature">
-                    <div class="svg">svg</div>
-                    <span>Business Growth</span>
+                    <div class="svg" :class="bg(cardData.topBadgeBg)" v-html="cardData.topBadge"></div>
+                    <span>{{cardData.topText}}</span>
                 </div>
-                <h2>Increase Brand Awareness</h2>
+                <h2>{{cardData.title}}</h2>
                 <div class="info-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At fuga sequi ipsum impedit nisi dolor itaque enim veniam provident aliquid fugiat consequuntur quisquam ipsam dolorem nihil, harum ducimus exercitationem explicabo.</p>
+                    <p>{{cardData.text}}</p>
                 </div>
                 <a href="#" class="sc-button full">Get Consultation</a>
                 
@@ -51,7 +62,6 @@ export default {
             border-radius: 50%; 
             color: white;
             line-height: 40px;
-            background: $ceruleanBlue;
             text-align: center;
         }
 

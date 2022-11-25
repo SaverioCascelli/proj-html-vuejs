@@ -23,4 +23,5 @@ export default [
         name: 'abstract',
         url: 'digitalbox.png'
     },
+
 ]
