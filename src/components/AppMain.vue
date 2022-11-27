@@ -3,11 +3,13 @@ import './geConsulationCard.vue'
 import GeConsulationCard from './geConsulationCard.vue';
 import Affiliate from './Affiliate.vue';
 import ConsulationCard from '../data/ConsulationCard'
+import LeadingOrganisation from './LeadingOrganisation.vue';
 export default {
     name: "appMain",
     components: {
         GeConsulationCard,
         Affiliate,
+        LeadingOrganisation,
      },
      data(){
         return{
@@ -32,6 +34,9 @@ export default {
         <section class="container affiliate-comp">
             <Affiliate/>
         </section>
+        <section class="container leading-org">
+            <LeadingOrganisation/>
+        </section>
     </main>
 </template>
 
@@ -42,6 +47,10 @@ export default {
     & >:nth-of-type(even){
         flex-direction: row-reverse;
     }
+}
+
+.leading-org{
+    margin-bottom: 130px;
 }
 
 

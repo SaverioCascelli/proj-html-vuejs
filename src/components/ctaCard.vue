@@ -22,7 +22,7 @@ export default {
             <input type="email" class="form-control" placeholder="Your Email*">
             <input type="number" class="form-control" placeholder="Your Phone Number*">
         </form>
-        <button class="sc-button">Get a Callback</button>
+        <button class="sc-button full">Get a Callback</button>
         <p class="little-text text-secondary">By submitting my data i agree to be contacted</p>
         </div>
     </div>
@@ -55,7 +55,6 @@ export default {
             }
             .sc-button{
                 width: 100%;
-                background: $ecstasy;
                 color: white;
             }
             .little-text{
