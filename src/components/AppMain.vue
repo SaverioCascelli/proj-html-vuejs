@@ -4,12 +4,14 @@ import GeConsulationCard from './geConsulationCard.vue';
 import Affiliate from './Affiliate.vue';
 import ConsulationCard from '../data/ConsulationCard'
 import LeadingOrganisation from './LeadingOrganisation.vue';
+import Feature from './feature.vue';
 export default {
     name: "appMain",
     components: {
         GeConsulationCard,
         Affiliate,
         LeadingOrganisation,
+        Feature,
      },
      data(){
         return{
@@ -37,11 +39,20 @@ export default {
         <section class="container leading-org">
             <LeadingOrganisation/>
         </section>
+        
+        <div class="feature-wrapper">
+            <section class="container feature">
+                <feature/>
+    
+            </section>
+
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
 @use '../style/general.scss' as *;
+@use '../style/partials/variables' as *;
 .get-consultation{
     margin-top:150px;
     & >:nth-of-type(even){
@@ -53,5 +64,10 @@ export default {
     margin-bottom: 130px;
 }
 
+.feature-wrapper{
+    background: $grayNurse;
+    padding-top: 80px;
+    padding-bottom: 120px ;
+}
 
 </style>

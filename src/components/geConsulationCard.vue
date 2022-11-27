@@ -32,7 +32,7 @@ export default {
                 <div class="info-text">
                     <p>{{cardData.text}}</p>
                 </div>
-                <a href="#" class="sc-button full">Get Consultation</a>
+                <a href="#" class="sc-button full">{{cardData.buttonText || 'Get Consultation'}}</a>
                 
             </div>
         <div class="col-6"></div>
@@ -49,9 +49,6 @@ export default {
     padding: 0 50px;
      margin: 50px auto;
 }
-    .img-wrapper{
-        width: 500px;
-    }
     .text{
         text-align: left;
         .svg{
