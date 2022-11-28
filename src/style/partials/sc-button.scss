@@ -11,6 +11,7 @@
     border-radius: 10px;
     text-decoration: none;
     line-height: 55px;
+    transition: all .5s;
 
     &:hover {
         background-color: $primary;
@@ -20,5 +21,10 @@
     &.full {
         color: white;
         background-color: $primary;
+
+    }
+
+    &.full:hover {
+        background-color: $tango;
     }
 }

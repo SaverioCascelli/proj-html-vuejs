@@ -1,5 +1,6 @@
 <script>
 import CallToAction from './CallToAction.vue';
+import fixedMsg from './fixedMsg.vue';
 import Advice from './Advice.vue';
 import Testimonials from './Testimonials.vue';
 import './geConsulationCard.vue'
@@ -11,6 +12,7 @@ import Feature from './feature.vue';
 export default {
     name: "appMain",
     components: {
+        fixedMsg,
         Advice,
         GeConsulationCard,
         CallToAction,
@@ -67,6 +69,8 @@ export default {
                 <CallToAction/>
             </div>
         </section>
+
+        <fixedMsg/>
     </main>
 </template>
 

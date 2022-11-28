@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 @use '../style/general.scss' as *;
 .right{
-    padding-left: 75px;
+    padding-left: 100px;
     .sc-card{
         box-shadow:none;
     }
