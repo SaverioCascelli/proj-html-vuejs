@@ -1,7 +1,14 @@
 
 <script>
+import headerNav from '../data/headerNav';
 export default {
     name:'AppHeader',
+    data(){
+        return{
+            headerNav,
+        }
+
+    }
 }
 </script>
 
@@ -14,12 +21,18 @@ export default {
 
         <nav class="col">
             <ul class="sc-list">
-                <li><a class="sc-dropdown active" href="#">Home <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li
+                v-for="(element,key) in headerNav" :key="key"
+                ><a :class="{'active':element.active}" href="#">
+                {{element.mainTxt}}
+                <i v-if="element.childTxt" class="fa-solid fa-chevron-down"></i>
+                </a></li>
+                <!-- <li><a class="sc-dropdown active" href="#">Home <i class="fa-solid fa-chevron-down"></i></a></li>
                 <li><a class="sc-dropdown" href="#">Services <i class="fa-solid fa-chevron-down"></i></a> </li>
                 <li><a href="#">Why Us</a> </li>
                 <li><a href="#">Case Studies</a> </li>
                 <li><a href="#">About</a> </li>
-                <li><a href="#">Blog</a> </li>
+                <li><a href="#">Blog</a> </li> -->
             </ul>
         </nav>
         

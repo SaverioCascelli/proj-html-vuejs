@@ -7,12 +7,13 @@ export default {
 <template>
     <div class="wrapper d-flex flex-column align-items-end">
 
-        <div class="img-wrapper">
-            <img src="../assets/marketing-expert-cta.png" alt="">
-        </div>
-
+        
         <div class="box-cha mb-3 pt-4 px-2">
+            <div class="img-wrapper">
+                <img src="../assets/marketing-expert-cta.png" alt="">
+            </div>
             <p>This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!</p>
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
         </div>
         <div class="smg-box">
             <i class="fa-solid fa-comments"></i>
@@ -39,7 +40,13 @@ export default {
 .box-cha{
     width: 250px;
     background: white;
-    box-shadow: 2px 2px 4px 4px lightgray;
+    box-shadow: 1px 1px 5px 1px lightgray;
+    position:relative;
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
 }
 
 .wrapper {
