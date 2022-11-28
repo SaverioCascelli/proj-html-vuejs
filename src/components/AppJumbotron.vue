@@ -1,9 +1,15 @@
 <script>
 import ctaCard from './ctaCard.vue';
+import { store } from '../data/store';
 export default {
     name:'AppJumbotron',
     components:{
         ctaCard,
+    },
+    data(){
+        return{
+            store,
+        }
     }
 }
 </script>
@@ -28,7 +34,7 @@ export default {
             <p class="bottom">Demos</p>
         </div>
         <div class="info-box ">
-            <p class="top col-magic-mint"><span>$</span>39</p>
+            <p class="top col-magic-mint"><span>$</span>{{store.price}}</p>
             <p class="bottom">On Sale</p>
         </div>
     </div> 

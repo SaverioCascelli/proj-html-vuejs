@@ -70,7 +70,10 @@ export default {
             </div>
         </section>
 
-        <fixedMsg/>
+        <div class="msg-fx">
+            <fixedMsg/>
+
+        </div>
     </main>
 </template>
 
@@ -106,6 +109,14 @@ export default {
 .call-to-action{
     background: $black;
     padding: 110px 0;
+}
+
+.msg-fx{
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
 }
 
 </style>
