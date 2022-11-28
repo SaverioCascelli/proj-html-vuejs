@@ -1,4 +1,5 @@
 <script>
+import CallToAction from './CallToAction.vue';
 import Advice from './Advice.vue';
 import Testimonials from './Testimonials.vue';
 import './geConsulationCard.vue'
@@ -12,6 +13,7 @@ export default {
     components: {
         Advice,
         GeConsulationCard,
+        CallToAction,
         Affiliate,
         LeadingOrganisation,
         Feature,
@@ -56,8 +58,13 @@ export default {
 
         <section class="advice ">
             <div class="container">
-                
                 <Advice/>
+            </div>
+        </section>
+        
+        <section class="call-to-action">
+            <div class="container text-white">
+                <CallToAction/>
             </div>
         </section>
     </main>
@@ -90,6 +97,11 @@ export default {
 .advice{
     padding: 150px 0;
     background: $grayNurse;
+}
+
+.call-to-action{
+    background: $black;
+    padding: 110px 0;
 }
 
 </style>
