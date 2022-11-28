@@ -3,7 +3,11 @@
 // add filter-primary class to the "hover" section and filter-targhet class on the section to glow up
 
 .filter-primary {
-    position: relative;
+
+
+    .filter-targhet {
+        position: relative;
+    }
 
     &:hover .filter-targhet:after {
         content: '';

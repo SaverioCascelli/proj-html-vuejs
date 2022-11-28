@@ -1,4 +1,6 @@
 <script>
+import Advice from './Advice.vue';
+import Testimonials from './Testimonials.vue';
 import './geConsulationCard.vue'
 import GeConsulationCard from './geConsulationCard.vue';
 import Affiliate from './Affiliate.vue';
@@ -8,10 +10,12 @@ import Feature from './feature.vue';
 export default {
     name: "appMain",
     components: {
+        Advice,
         GeConsulationCard,
         Affiliate,
         LeadingOrganisation,
         Feature,
+        Testimonials,
      },
      data(){
         return{
@@ -43,10 +47,19 @@ export default {
         <div class="feature-wrapper">
             <section class="container feature">
                 <feature/>
-    
             </section>
-
         </div>
+
+        <section class=" container testimonials">
+            <Testimonials/>
+        </section>
+
+        <section class="advice ">
+            <div class="container">
+                
+                <Advice/>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -62,12 +75,21 @@ export default {
 
 .leading-org{
     margin-bottom: 130px;
-}
+}  
 
 .feature-wrapper{
     background: $grayNurse;
     padding-top: 80px;
     padding-bottom: 120px ;
+}
+
+.testimonials{
+    margin-top:100px;
+
+}
+.advice{
+    padding: 150px 0;
+    background: $grayNurse;
 }
 
 </style>
